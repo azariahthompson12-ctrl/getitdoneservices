@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Get It Done Services | General Maintenance & Contracting</title>
-    <meta name="description" content="Professional general maintenance, roof cleaning & repairs, power washing, welding & fabrication, plumbing, lawn care, gutter repairs, and property cleaning.">
+    <title>Get It Done Services | General Contracting & Property Maintenance</title>
+    <meta name="description" content="Professional general maintenance, roof cleaning & repairs, power washing, welding & fabrication, plumbing, lawn care, gutter repairs, and property cleaning across Trinidad.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary: #1e3a8a;
-            --primary-dark: #1e293b;
-            --accent: #f59e0b;
-            --accent-hover: #d97706;
+            --primary: #0f172a;        /* Deep Corporate Navy/Black */
+            --brand-red: #dc2626;      /* Professional Accent Red */
+            --brand-blue: #1d4ed8;     /* Corporate Blue */
             --light-bg: #f8fafc;
             --card-bg: #ffffff;
-            --text-main: #0f172a;
-            --text-muted: #475569;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
             --border: #e2e8f0;
             --whatsapp: #25d366;
             --whatsapp-dark: #1da851;
-            --radius: 12px;
-            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
         }
 
         * {
@@ -36,21 +35,47 @@
             background-color: var(--light-bg);
             color: var(--text-main);
             line-height: 1.6;
-            padding-bottom: 90px;
+            padding-bottom: 80px;
         }
 
-        header {
-            background: var(--primary-dark);
+        /* TOP CORPORATE BAR */
+        .top-bar {
+            background: var(--primary);
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            padding: 0.5rem 2rem;
+            border-bottom: 2px solid var(--brand-red);
+        }
+
+        .top-bar-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .top-bar a {
             color: #ffffff;
-            padding: 1.25rem 2rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* MAIN HEADER */
+        header {
+            background: #ffffff;
+            color: var(--primary);
+            padding: 1rem 2rem;
             position: sticky;
             top: 0;
             z-index: 100;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
         }
 
         .nav-container {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -61,70 +86,65 @@
             font-size: 1.5rem;
             font-weight: 800;
             letter-spacing: -0.02em;
-            color: #ffffff;
+            color: var(--primary);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+        }
+
+        .logo img {
+            max-height: 45px;
+            width: auto;
         }
 
         .logo span {
-            color: var(--accent);
+            color: var(--brand-red);
         }
 
         .nav-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
         .nav-links a {
-            color: #cbd5e1;
+            color: var(--text-main);
             text-decoration: none;
-            font-weight: 500;
+            font-weight: 600;
             font-size: 0.95rem;
             transition: color 0.2s;
         }
 
         .nav-links a:hover {
-            color: var(--accent);
+            color: var(--brand-red);
         }
 
+        /* CORPORATE HERO SECTION */
         .hero {
-            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18784d6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
-            padding: 5rem 1.5rem;
+            padding: 6rem 1.5rem;
             text-align: center;
-            position: relative;
         }
 
         .hero-content {
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
         .hero h1 {
-            font-size: 2.75rem;
+            font-size: 3rem;
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.15;
             margin-bottom: 1.25rem;
             letter-spacing: -0.03em;
         }
 
         .hero p {
             font-size: 1.2rem;
-            color: #94a3b8;
-            margin-bottom: 2rem;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
+            color: #cbd5e1;
+            margin-bottom: 2.5rem;
         }
 
         .btn {
@@ -132,7 +152,7 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 0.85rem 1.75rem;
+            padding: 0.85rem 2rem;
             font-size: 1rem;
             font-weight: 700;
             border-radius: var(--radius);
@@ -142,13 +162,13 @@
             border: none;
         }
 
-        .btn-accent {
-            background-color: var(--accent);
-            color: #0f172a;
+        .btn-red {
+            background-color: var(--brand-red);
+            color: white;
         }
 
-        .btn-accent:hover {
-            background-color: var(--accent-hover);
+        .btn-red:hover {
+            background-color: #b91c1c;
             transform: translateY(-2px);
         }
 
@@ -162,64 +182,64 @@
             transform: translateY(-2px);
         }
 
+        /* SECTION HEADINGS */
         .section {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 4rem auto;
             padding: 0 1.5rem;
         }
 
         .section-title {
-            text-align: center;
-            font-size: 2rem;
+            font-size: 2.2rem;
             font-weight: 800;
+            color: var(--primary);
             margin-bottom: 0.5rem;
-            letter-spacing: -0.02em;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--brand-red);
         }
 
         .section-subtitle {
-            text-align: center;
             color: var(--text-muted);
             margin-bottom: 3rem;
-            font-size: 1.05rem;
+            font-size: 1.1rem;
         }
 
+        /* SERVICES GRID */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
         }
 
         .service-card {
             background: var(--card-bg);
             border-radius: var(--radius);
-            padding: 2rem;
+            padding: 2.5rem 2rem;
             border: 1px solid var(--border);
             box-shadow: var(--shadow);
-            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 4px solid var(--brand-blue);
+            transition: transform 0.2s;
         }
 
         .service-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            width: 48px;
-            height: 48px;
-            background: #eff6ff;
-            color: var(--primary);
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.25rem;
+            transform: translateY(-5px);
         }
 
         .service-card h3 {
-            font-size: 1.3rem;
+            font-size: 1.35rem;
             font-weight: 700;
-            margin-bottom: 0.75rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
         }
 
         .service-card ul {
@@ -230,26 +250,71 @@
         .service-card ul li {
             position: relative;
             padding-left: 1.25rem;
-            margin-bottom: 0.5rem;
-            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+            font-size: 0.98rem;
         }
 
         .service-card ul li::before {
-            content: "✓";
+            content: "—";
             position: absolute;
             left: 0;
-            color: var(--accent);
+            color: var(--brand-red);
             font-weight: bold;
         }
 
-        .quote-container {
-            background: var(--card-bg);
-            border-radius: var(--radius);
-            padding: 2.5rem;
+        /* CORPORATE CONTACT / QUOTE LAYOUT */
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            background: white;
             border: 1px solid var(--border);
+            border-radius: var(--radius);
             box-shadow: var(--shadow);
-            max-width: 700px;
-            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .contact-info-panel {
+            background: var(--primary);
+            color: white;
+            padding: 3rem;
+        }
+
+        .contact-info-panel h3 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: white;
+        }
+
+        .contact-info-panel p {
+            color: #cbd5e1;
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+        }
+
+        .info-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .info-item strong {
+            display: block;
+            color: var(--brand-red);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: 0.25rem;
+        }
+
+        .info-item span, .info-item a {
+            color: #ffffff;
+            font-size: 1.1rem;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .form-panel {
+            padding: 3rem;
         }
 
         .form-group {
@@ -258,24 +323,24 @@
 
         .form-group label {
             display: block;
-            font-weight: 600;
+            font-weight: 700;
             margin-bottom: 0.5rem;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+            color: var(--primary);
         }
 
         .form-control {
             width: 100%;
-            padding: 0.85rem;
+            padding: 0.85rem 1rem;
             border: 1px solid var(--border);
-            border-radius: 8px;
+            border-radius: 6px;
             font-size: 1rem;
             background-color: #f8fafc;
-            transition: border-color 0.2s;
         }
 
         .form-control:focus {
             outline: none;
-            border-color: var(--primary);
+            border-color: var(--brand-blue);
             background-color: #ffffff;
         }
 
@@ -284,28 +349,14 @@
             min-height: 120px;
         }
 
-        .contact-info-box {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #eff6ff;
-            border-radius: var(--radius);
-            border: 1px solid #bfdbfe;
-        }
-
-        .contact-info-box p {
-            font-size: 1.1rem;
-            color: var(--primary-dark);
-            font-weight: 600;
-        }
-
+        /* FLOATING WHATSAPP */
         .floating-whatsapp {
             position: fixed;
-            bottom: 20px;
-            right: 20px;
+            bottom: 24px;
+            right: 24px;
             background-color: var(--whatsapp);
             color: white;
-            padding: 12px 20px;
+            padding: 12px 22px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 700;
@@ -323,56 +374,66 @@
         }
 
         footer {
-            background: var(--primary-dark);
+            background: var(--primary);
             color: #94a3b8;
             text-align: center;
-            padding: 2rem 1.5rem;
+            padding: 2.5rem 1.5rem;
             font-size: 0.9rem;
-            border-top: 1px solid #334155;
+            border-top: 4px solid var(--brand-red);
         }
 
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            .nav-links {
-                display: none;
-            }
+        @media (max-width: 900px) {
+            .contact-layout { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
         }
     </style>
 </head>
 <body>
 
+    <!-- TOP CORPORATE BAR -->
+    <div class="top-bar">
+        <div class="top-bar-container">
+            <div>📍 Servicing All of Trinidad & Tobago | Mon - Sat: 8:00 AM - 5:00 PM</div>
+            <div>📞 Direct Line: <a href="https://wa.me/18687296946" target="_blank">+1 (868) 729-6946</a></div>
+        </div>
+    </div>
+
+    <!-- MAIN HEADER -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">GET IT DONE <span>SERVICES</span></a>
+            <a href="#" class="logo">
+                <img src="logo.png" alt="Get It Done Services" onerror="this.style.display='none'">
+                GET IT DONE <span>SERVICES</span>
+            </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#quote">Request Quote</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="#quote">Contact & Quote</a></li>
+                <li><a href="https://wa.me/18687296946" target="_blank">WhatsApp Booking</a></li>
             </ul>
         </div>
     </header>
 
+    <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Quality Contracting & Property Maintenance Done Right</h1>
-            <p>Your all-in-one solution for roof cleaning & repairs, power washing, welding, plumbing, lawn care, gutter care, and general property maintenance.</p>
-            <div class="hero-buttons">
-                <a href="#quote" class="btn btn-accent">Request a Free Estimate</a>
-                <a href="https://wa.me/18687296946?text=Hi,%20I%20would%20like%20to%20request%20a%20site%20visit%20quote%20for%20Get%20It%20Done%20Services." target="_blank" class="btn btn-whatsapp">📱 Direct WhatsApp Booking</a>
+            <h1>Professional General Contracting & Property Maintenance</h1>
+            <p>Industrial-grade standards for residential and commercial roofing, welding, power washing, plumbing, and site repairs.</p>
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+                <a href="#quote" class="btn btn-red">Request a Site Visit</a>
+                <a href="https://wa.me/18687296946?text=Hi,%20I%20would%20like%20to%20request%20a%20site%20visit%20quote%20for%20Get%20It%20Done%20Services." target="_blank" class="btn btn-whatsapp">📱 Chat on WhatsApp</a>
             </div>
         </div>
     </section>
 
+    <!-- SERVICES SECTION -->
     <section id="services" class="section">
-        <h2 class="section-title">Our Services</h2>
-        <p class="section-subtitle">Reliable, end-to-end property upkeep and specialized contracting solutions.</p>
+        <h2 class="section-title">Our Capabilities & Services</h2>
+        <p class="section-subtitle">Delivering exceptional workmanship across Trinidad with dependable turnaround times.</p>
         
         <div class="services-grid">
             <div class="service-card">
-                <div class="service-icon">🏠</div>
-                <h3>Roof & Gutter Care</h3>
+                <h3>Roof & Gutter Systems</h3>
                 <ul>
                     <li>Roof cleaning, washing & moss removal</li>
                     <li>Leak repairs & full roof installation</li>
@@ -382,7 +443,6 @@
             </div>
 
             <div class="service-card">
-                <div class="service-icon">🛠️</div>
                 <h3>Welding & Fabrication</h3>
                 <ul>
                     <li>Custom steel structural welding</li>
@@ -393,18 +453,16 @@
             </div>
 
             <div class="service-card">
-                <div class="service-icon">🚿</div>
                 <h3>Power Washing & Cleaning</h3>
                 <ul>
                     <li>High-pressure exterior washdowns</li>
                     <li>Driveway, concrete & walkway cleaning</li>
-                    <li>Full residential & commercial property cleaning</li>
+                    <li>Full residential & commercial cleaning</li>
                     <li>Mold & grime restoration</li>
                 </ul>
             </div>
 
             <div class="service-card">
-                <div class="service-icon">🌿</div>
                 <h3>Lawn Care & Grounds</h3>
                 <ul>
                     <li>Lawn mowing, trimming & edging</li>
@@ -415,7 +473,6 @@
             </div>
 
             <div class="service-card">
-                <div class="service-icon">🔧</div>
                 <h3>Plumbing Services</h3>
                 <ul>
                     <li>Pipe leak detection & repairs</li>
@@ -426,7 +483,6 @@
             </div>
 
             <div class="service-card">
-                <div class="service-icon">🧰</div>
                 <h3>General Maintenance</h3>
                 <ul>
                     <li>Comprehensive property repairs</li>
@@ -438,54 +494,73 @@
         </div>
     </section>
 
+    <!-- CORPORATE CONTACT & QUOTE SECTION -->
     <section id="quote" class="section">
-        <h2 class="section-title" id="contact">Request a Free Site Visit Quote</h2>
-        <p class="section-subtitle">Fill out the form below or contact us directly to schedule a site visit.</p>
+        <h2 class="section-title">Request a Quotation</h2>
+        <p class="section-subtitle">Get in touch with our team for site inspections, estimates, and project bookings.</p>
         
-        <div class="contact-info-box">
-            <p>📞 Phone / WhatsApp: <a href="https://wa.me/18687296946" target="_blank" style="color: var(--primary); text-decoration: none;">+1 (868) 729-6946</a></p>
-            <p style="margin-top: 8px; font-weight: 500; font-size: 1rem; color: var(--text-muted);">✉️ Email: <a href="mailto:getitdoneservicestnt@gmail.com" style="color: var(--primary-dark); text-decoration: none;">getitdoneservicestnt@gmail.com</a></p>
-        </div>
+        <div class="contact-layout">
+            <div class="contact-info-panel">
+                <h3>Head Office Contact</h3>
+                <p>Reach out directly for rapid scheduling across Trinidad.</p>
+                
+                <div class="info-item">
+                    <strong>Telephone / WhatsApp</strong>
+                    <span>+1 (868) 729-6946</span>
+                </div>
 
-        <div class="quote-container">
-            <form action="https://formspree.io/f/xwlvanll" method="POST">
-                <div class="form-group">
-                    <label for="name">Full Name</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                <div class="info-item">
+                    <strong>Official Email</strong>
+                    <span>getitdoneservicestnt@gmail.com</span>
                 </div>
-                <div class="form-group">
-                    <label for="phone">Phone / WhatsApp Number</label>
-                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="(868) 729-6946" required>
+
+                <div class="info-item">
+                    <strong>Business Hours</strong>
+                    <span>Monday – Saturday: 8:00 AM – 5:00 PM</span>
                 </div>
-                <div class="form-group">
-                    <label for="service">Service Required</label>
-                    <select id="service" name="service" class="form-control" required>
-                        <option value="">Select a service...</option>
-                        <option value="Power Washing">Power Washing</option>
-                        <option value="Welding and Fabrication">Welding & Fabrication</option>
-                        <option value="Roof Cleaning, Repairs & Installation">Roof Cleaning, Repairs & Installation</option>
-                        <option value="Lawn Care Services">Lawn Care Services</option>
-                        <option value="Plumbing Services">Plumbing Services</option>
-                        <option value="Property Cleaning">Property Cleaning</option>
-                        <option value="Gutter Cleaning and Repairs">Gutter Cleaning & Repairs</option>
-                        <option value="General Maintenance">General Maintenance</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Project Details & Address</label>
-                    <textarea id="message" name="message" class="form-control" placeholder="Describe the job, location, or preferred dates..." required></textarea>
-                </div>
-                <button type="submit" class="btn btn-accent" style="width: 100%;">Submit Quote Request</button>
-            </form>
+            </div>
+
+            <div class="form-panel">
+                <form action="https://formspree.io/f/xwlvanll" method="POST">
+                    <div class="form-group">
+                        <label for="name">Full Name (Required)</label>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone / WhatsApp Number (Required)</label>
+                        <input type="tel" id="phone" name="phone" class="form-control" placeholder="(868) 000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Service Required (Required)</label>
+                        <select id="service" name="service" class="form-control" required>
+                            <option value="">Select a service category...</option>
+                            <option value="Power Washing">Power Washing</option>
+                            <option value="Welding and Fabrication">Welding & Fabrication</option>
+                            <option value="Roof Cleaning, Repairs & Installation">Roof Cleaning, Repairs & Installation</option>
+                            <option value="Lawn Care Services">Lawn Care Services</option>
+                            <option value="Plumbing Services">Plumbing Services</option>
+                            <option value="Property Cleaning">Property Cleaning</option>
+                            <option value="Gutter Cleaning and Repairs">Gutter Cleaning & Repairs</option>
+                            <option value="General Maintenance">General Maintenance</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Project Details & Location (Required)</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Describe scope of work and location..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-red" style="width: 100%;">Submit Inquiry</button>
+                </form>
+            </div>
         </div>
     </section>
 
+    <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/18687296946?text=Hi,%20I%20would%20like%20to%20request%20a%20site%20visit%20quote%20for%20Get%20It%20Done%20Services." target="_blank" class="floating-whatsapp">
         💬 Chat on WhatsApp
     </a>
 
     <footer>
-        <p>&copy; 2026 Get It Done Services. All Rights Reserved.</p>
+        <p>&copy; 2026 Get It Done Services. All Rights Reserved. | Professional Property Maintenance & Contracting</p>
     </footer>
 
 </body>
