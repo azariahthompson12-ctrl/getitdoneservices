@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get It Done Services | General Contracting & Property Maintenance</title>
+    <meta name="description" content="Professional general contracting, standing seam roofing, concrete masonry, exterior painting, and site repairs. Quality service you can rely on.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #1e3a8a;
+            --primary-dark: #1e293b;
+            --accent: #f59e0b;
+            --accent-hover: #d97706;
+            --light-bg: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #0f172a;
+            --text-muted: #475569;
+            --border: #e2e8f0;
+            --whatsapp: #25d366;
+            --whatsapp-dark: #1da851;
+            --radius: 12px;
+            --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-bottom: 90px;
+        }
+
+        header {
+            background: var(--primary-dark);
+            color: #ffffff;
+            padding: 1.25rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: white;
+            padding: 5rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.75rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 1.25rem;
+            letter-spacing: -0.03em;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #94a3b8;
+            margin-bottom: 2rem;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 0.85rem 1.75rem;
+            font-size: 1rem;
+            font-weight: 700;
+            border-radius: var(--radius);
+            text-decoration: none;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            border: none;
+        }
+
+        .btn-accent {
+            background-color: var(--accent);
+            color: #0f172a;
+        }
+
+        .btn-accent:hover {
+            background-color: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: var(--whatsapp);
+            color: white;
+        }
+
+        .btn-whatsapp:hover {
+            background-color: var(--whatsapp-dark);
+            transform: translateY(-2px);
+        }
+
+        .section {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 1.5rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.05rem;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: #eff6ff;
+            color: var(--primary);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-card h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .service-card ul {
+            list-style: none;
+            color: var(--text-muted);
+        }
+
+        .service-card ul li {
+            position: relative;
+            padding-left: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .service-card ul li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .quote-container {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 1.25rem;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 0.85rem;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            background-color: #f8fafc;
+            transition: border-color 0.2s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary);
+            background-color: #ffffff;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: var(--whatsapp);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            transition: transform 0.2s;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.05);
+            background-color: var(--whatsapp-dark);
+        }
+
+        footer {
+            background: var(--primary-dark);
+            color: #94a3b8;
+            text-align: center;
+            padding: 2rem 1.5rem;
+            font-size: 0.9rem;
+            border-top: 1px solid #334155;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .nav-links {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">GET IT DONE <span>SERVICES</span></a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#quote">Request Quote</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Quality Contracting & Property Repairs Done Right</h1>
+            <p>From standing seam roofing to masonry, waterproofing, and exterior painting. Fast response, expert craftsmanship, and reliable estimates.</p>
+            <div class="hero-buttons">
+                <a href="#quote" class="btn btn-accent">Request a Free Estimate</a>
+                <a href="https://wa.me/18681234567?text=Hi,%20I%20would%20like%20to%20request%20a%20site%20visit%20quote%20for%20Get%20It%20Done%20Services." target="_blank" class="btn btn-whatsapp">📱 Direct WhatsApp Booking</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Reliable, end-to-end contracting and site repair solutions.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">🏠</div>
+                <h3>Roofing & Under-Ceiling</h3>
+                <ul>
+                    <li>Standing seam metal roofing (18" & custom)</li>
+                    <li>Purlin & radiant barrier installation</li>
+                    <li>Gutter repairs & leakage fixes</li>
+                    <li>Inverted ceiling systems</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🧱</div>
+                <h3>Masonry & Concrete Works</h3>
+                <ul>
+                    <li>Concrete footings & slab foundations</li>
+                    <li>Walkway crack sealing & repair</li>
+                    <li>Tile installation & floor surface prep</li>
+                    <li>Silane penetrating concrete sealers</li>
+                </ul>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🎨</div>
+                <h3>Painting & Property Care</h3>
+                <ul>
+                    <li>Exterior & interior wall repainting</li>
+                    <li>Pressure washing & surface washdowns</li>
+                    <li>Plumbing fixes & water pump installs</li>
+                    <li>General site maintenance</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="quote" class="section">
+        <h2 class="section-title">Request a Free Site Visit Quote</h2>
+        <p class="section-subtitle">Fill out the form below and we will contact you promptly.</p>
+        
+        <div class="quote-container">
+            <form action="https://formspree.io/f/xqaeoppz" method="POST">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" class="form-control" placeholder="John Doe" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone / WhatsApp Number</label>
+                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="(868) 000-0000" required>
+                </div>
+                <div class="form-group">
+                    <label for="service">Service Required</label>
+                    <select id="service" name="service" class="form-control" required>
+                        <option value="">Select a service...</option>
+                        <option value="Standing Seam Roofing">Standing Seam Roofing</option>
+                        <option value="Masonry & Concrete Work">Masonry & Concrete Work</option>
+                        <option value="Exterior Painting">Exterior Painting</option>
+                        <option value="Crack Sealing / Waterproofing">Crack Sealing / Waterproofing</option>
+                        <option value="Plumbing & General Maintenance">Plumbing & General Maintenance</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Project Details & Address</label>
+                    <textarea id="message" name="message" class="form-control" placeholder="Describe the job, site location, or preferred site visit dates..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-accent" style="width: 100%;">Submit Quote Request</button>
+            </form>
+        </div>
+    </section>
+
+    <a href="https://wa.me/18681234567?text=Hi,%20I%20would%20like%20to%20request%20a%20site%20visit%20quote%20for%20Get%20It%20Done%20Services." target="_blank" class="floating-whatsapp">
+        💬 Chat on WhatsApp
+    </a>
+
+    <footer>
+        <p>&copy; 2026 Get It Done Services. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
