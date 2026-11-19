@@ -42,40 +42,96 @@
             padding-bottom: 80px;
         }
 
-        /* TOP CORPORATE BAR */
-        .top-bar {
-            background: var(--primary);
-            color: #cbd5e1;
-            font-size: 0.85rem;
-            padding: 0.55rem 2rem;
-            border-bottom: 2px solid var(--brand-red);
+        /* RSL-STYLE TWO-TIER CORPORATE HEADER */
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
 
-        .top-bar-container {
+        /* TIER 1: LARGE LOGO & QUICK INFO BAR */
+        .header-main {
+            background: #ffffff;
+            padding: 0.85rem 2rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-main-container {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            gap: 10px;
         }
 
-        .top-bar a {
-            color: #ffffff;
+        .logo {
+            display: flex;
+            align-items: center;
             text-decoration: none;
-            font-weight: 600;
         }
 
-        /* MAIN HEADER */
-        header {
-            background: #ffffff;
+        /* OVERSIZED CORPORATE LOGO */
+        .logo img {
+            height: 95px;
+            width: auto;
+            max-width: 300px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .header-info-group {
+            display: flex;
+            align-items: center;
+            gap: 1.75rem;
+            flex-wrap: wrap;
+        }
+
+        .header-info-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            font-weight: 700;
             color: var(--primary);
-            padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            text-transform: uppercase;
+            letter-spacing: 0.02em;
+        }
+
+        .header-info-item a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .header-info-item a:hover {
+            color: var(--brand-red);
+        }
+
+        .header-cta-btn {
+            background-color: var(--brand-red);
+            color: #ffffff;
+            padding: 0.65rem 1.35rem;
+            border-radius: 6px;
+            font-size: 0.88rem;
+            font-weight: 800;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 0.03em;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .header-cta-btn:hover {
+            background-color: #b91c1c;
+            transform: translateY(-1px);
+        }
+
+        /* TIER 2: DARK NAVIGATION BAR */
+        .nav-bar {
+            background: #18181b;
+            padding: 0.75rem 2rem;
+            border-bottom: 3px solid var(--brand-red);
         }
 
         .nav-container {
@@ -86,35 +142,15 @@
             align-items: center;
         }
 
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            letter-spacing: -0.02em;
-            color: var(--primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .logo img {
-            max-height: 48px;
-            width: auto;
-            object-fit: contain;
-        }
-
-        .logo span {
-            color: var(--brand-red);
-        }
-
         .nav-links {
             display: flex;
-            gap: 1.75rem;
+            gap: 2.25rem;
             list-style: none;
+            flex-wrap: wrap;
         }
 
         .nav-links a {
-            color: var(--text-main);
+            color: #f8fafc;
             text-decoration: none;
             font-weight: 600;
             font-size: 0.95rem;
@@ -125,11 +161,17 @@
             color: var(--brand-red);
         }
 
+        .nav-region-tag {
+            color: #cbd5e1;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
         /* CORPORATE HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18784d6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(15, 23, 42, 0.84), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18784d6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
-            padding: 6rem 1.5rem;
+            padding: 5.5rem 1.5rem;
             text-align: center;
         }
 
@@ -590,34 +632,51 @@
         @media (max-width: 900px) {
             .contact-layout { grid-template-columns: 1fr; }
             .hero h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
+            .header-info-group { display: none; }
+            .nav-region-tag { display: none; }
+            .logo img { height: 75px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- TOP CORPORATE BAR -->
-    <div class="top-bar">
-        <div class="top-bar-container">
-            <div>📍 Servicing Trinidad, Tobago & the Caribbean | 🕒 24/7 Emergency & Scheduled Support</div>
-            <div>📞 Direct Line: <a href="https://wa.me/18687296946" target="_blank">+1 (868) 729-6946</a></div>
-        </div>
-    </div>
+    <!-- RSL-STYLE TWO-TIER HEADER -->
+    <header class="site-header">
+        <!-- TIER 1: LARGE PROMINENT LOGO & QUICK CONTACT -->
+        <div class="header-main">
+            <div class="header-main-container">
+                <a href="#" class="logo">
+                    <img src="logo-png.png" alt="Get It Done Services">
+                </a>
 
-    <!-- MAIN HEADER -->
-    <header>
-        <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="logo-png.png" alt="Get It Done Services Logo" onerror="this.style.display='none'">
-                GET IT DONE <span>SERVICES</span>
-            </a>
-            <ul class="nav-links">
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#quote">Schedule & Quote</a></li>
-            </ul>
+                <div class="header-info-group">
+                    <div class="header-info-item">
+                        📍 <span>Trinidad, Tobago & Caribbean</span>
+                    </div>
+                    <div class="header-info-item">
+                        🕒 <span>Open 24/7</span>
+                    </div>
+                    <div class="header-info-item">
+                        📞 <a href="https://wa.me/18687296946" target="_blank">1 (868) 729-6946</a>
+                    </div>
+                    <a href="#quote" class="header-cta-btn">Request a Quote</a>
+                </div>
+            </div>
         </div>
+
+        <!-- TIER 2: DARK CORPORATE NAVIGATION BAR -->
+        <nav class="nav-bar">
+            <div class="nav-container">
+                <ul class="nav-links">
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#projects">Featured Projects</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#quote">Live Schedule & Quote</a></li>
+                    <li><a href="https://wa.me/18687296946" target="_blank">24/7 WhatsApp</a></li>
+                </ul>
+                <div class="nav-region-tag">Emergency & Scheduled Contracting</div>
+            </div>
+        </nav>
     </header>
 
     <!-- HERO SECTION -->
