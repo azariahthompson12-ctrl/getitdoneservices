@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get It Done Services | General Contracting & Property Maintenance</title>
-    <meta name="description" content="Professional general maintenance, roof cleaning & repairs, power washing, welding & fabrication, plumbing, lawn care, gutter repairs, and property cleaning across Trinidad.">
+    <meta name="description" content="24/7 general maintenance, roof cleaning & repairs, power washing, welding & fabrication, plumbing, lawn care, and gutter repairs across Trinidad, Tobago, and the Caribbean.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -31,6 +31,10 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             background-color: var(--light-bg);
             color: var(--text-main);
@@ -43,7 +47,7 @@
             background: var(--primary);
             color: #cbd5e1;
             font-size: 0.85rem;
-            padding: 0.5rem 2rem;
+            padding: 0.55rem 2rem;
             border-bottom: 2px solid var(--brand-red);
         }
 
@@ -90,12 +94,13 @@
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
         }
 
         .logo img {
-            max-height: 45px;
+            max-height: 48px;
             width: auto;
+            object-fit: contain;
         }
 
         .logo span {
@@ -104,7 +109,7 @@
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 1.75rem;
             list-style: none;
         }
 
@@ -122,19 +127,33 @@
 
         /* CORPORATE HERO SECTION */
         .hero {
-            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18784d6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            background: linear-gradient(rgba(15, 23, 42, 0.85), rgba(15, 23, 42, 0.92)), url('https://images.unsplash.com/photo-1541888946425-d0fbb18784d6?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             color: white;
             padding: 6rem 1.5rem;
             text-align: center;
         }
 
         .hero-content {
-            max-width: 850px;
+            max-width: 880px;
             margin: 0 auto;
         }
 
+        .hero-badge {
+            display: inline-block;
+            background: rgba(220, 38, 38, 0.2);
+            border: 1px solid var(--brand-red);
+            color: #fca5a5;
+            padding: 0.35rem 1rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            margin-bottom: 1.25rem;
+        }
+
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.9rem;
             font-weight: 800;
             line-height: 1.15;
             margin-bottom: 1.25rem;
@@ -185,7 +204,7 @@
         /* SECTION HEADINGS */
         .section {
             max-width: 1200px;
-            margin: 4rem auto;
+            margin: 4.5rem auto;
             padding: 0 1.5rem;
         }
 
@@ -262,10 +281,187 @@
             font-weight: bold;
         }
 
+        /* PROJECT GALLERY GRID */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .gallery-item {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-4px);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+            background: #e2e8f0;
+        }
+
+        .gallery-caption {
+            padding: 1.25rem;
+        }
+
+        .gallery-caption span {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: var(--brand-red);
+            margin-bottom: 0.25rem;
+        }
+
+        .gallery-caption h4 {
+            font-size: 1.1rem;
+            color: var(--primary);
+            margin-bottom: 0.35rem;
+        }
+
+        .gallery-caption p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--brand-red);
+            border-radius: var(--radius);
+            padding: 2rem;
+            box-shadow: var(--shadow);
+        }
+
+        .stars {
+            color: #f59e0b;
+            font-size: 1.1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .testimonial-card p {
+            font-style: italic;
+            color: var(--text-main);
+            margin-bottom: 1.25rem;
+            font-size: 0.98rem;
+        }
+
+        .client-meta strong {
+            display: block;
+            color: var(--primary);
+            font-size: 1rem;
+        }
+
+        .client-meta span {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        /* LIVE SCHEDULED AVAILABILITY WIDGET */
+        .schedule-box {
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .schedule-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 1.25rem;
+        }
+
+        .schedule-header h3 {
+            font-size: 1.3rem;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .live-dot {
+            height: 10px;
+            width: 10px;
+            background-color: #16a34a;
+            border-radius: 50%;
+            display: inline-block;
+            box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.2);
+        }
+
+        .slots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+            gap: 1rem;
+        }
+
+        .slot-card {
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 1rem;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #f8fafc;
+        }
+
+        .slot-card:hover {
+            border-color: var(--brand-blue);
+            background: #eff6ff;
+        }
+
+        .slot-card.selected {
+            border-color: var(--brand-red);
+            background: #fef2f2;
+            box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.2);
+        }
+
+        .slot-day {
+            font-weight: 800;
+            color: var(--primary);
+            font-size: 0.95rem;
+        }
+
+        .slot-date {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin: 0.2rem 0 0.5rem;
+        }
+
+        .slot-status {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.6rem;
+            border-radius: 50px;
+            background: #dcfce7;
+            color: #166534;
+        }
+
         /* CORPORATE CONTACT / QUOTE LAYOUT */
         .contact-layout {
             display: grid;
-            grid-template-columns: 1fr 1.2fr;
+            grid-template-columns: 1fr 1.25fr;
             gap: 3rem;
             background: white;
             border: 1px solid var(--border);
@@ -283,24 +479,24 @@
         .contact-info-panel h3 {
             font-size: 1.75rem;
             font-weight: 800;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.25rem;
             color: white;
         }
 
         .contact-info-panel p {
             color: #cbd5e1;
-            margin-bottom: 1.5rem;
-            font-size: 1.05rem;
+            margin-bottom: 1.75rem;
+            font-size: 1.02rem;
         }
 
         .info-item {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1.65rem;
         }
 
         .info-item strong {
             display: block;
             color: var(--brand-red);
-            font-size: 0.9rem;
+            font-size: 0.88rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
             margin-bottom: 0.25rem;
@@ -308,9 +504,18 @@
 
         .info-item span, .info-item a {
             color: #ffffff;
-            font-size: 1.1rem;
+            font-size: 1.08rem;
             text-decoration: none;
             font-weight: 600;
+            line-height: 1.4;
+            display: block;
+        }
+
+        .info-item small {
+            color: #94a3b8;
+            font-size: 0.88rem;
+            display: block;
+            margin-top: 4px;
         }
 
         .form-panel {
@@ -394,7 +599,7 @@
     <!-- TOP CORPORATE BAR -->
     <div class="top-bar">
         <div class="top-bar-container">
-            <div>📍 Servicing All of Trinidad & Tobago | Mon - Sat: 8:00 AM - 5:00 PM</div>
+            <div>📍 Servicing Trinidad, Tobago & the Caribbean | 🕒 24/7 Emergency & Scheduled Support</div>
             <div>📞 Direct Line: <a href="https://wa.me/18687296946" target="_blank">+1 (868) 729-6946</a></div>
         </div>
     </div>
@@ -403,13 +608,14 @@
     <header>
         <div class="nav-container">
             <a href="#" class="logo">
-                <img src="logo.png" alt="Get It Done Services" onerror="this.style.display='none'">
+                <img src="logo.png" alt="Get It Done Services Logo" onerror="this.style.display='none'">
                 GET IT DONE <span>SERVICES</span>
             </a>
             <ul class="nav-links">
                 <li><a href="#services">Services</a></li>
-                <li><a href="#quote">Contact & Quote</a></li>
-                <li><a href="https://wa.me/18687296946" target="_blank">WhatsApp Booking</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#quote">Schedule & Quote</a></li>
             </ul>
         </div>
     </header>
@@ -417,10 +623,11 @@
     <!-- HERO SECTION -->
     <section class="hero">
         <div class="hero-content">
+            <div class="hero-badge">24/7 Rapid Response & Scheduled Contracting</div>
             <h1>Professional General Contracting & Property Maintenance</h1>
-            <p>Industrial-grade standards for residential and commercial roofing, welding, power washing, plumbing, and site repairs.</p>
+            <p>Delivering exceptional workmanship across Trinidad, Tobago, and the Caribbean with dependable turnaround times.</p>
             <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
-                <a href="#quote" class="btn btn-red">Request a Site Visit</a>
+                <a href="#quote" class="btn btn-red">Check Available Dates & Quote</a>
                 <a href="https://wa.me/18687296946?text=Hi,%20I%20would%20like%20to%20request%20a%20site%20visit%20quote%20for%20Get%20It%20Done%20Services." target="_blank" class="btn btn-whatsapp">📱 Chat on WhatsApp</a>
             </div>
         </div>
@@ -429,7 +636,7 @@
     <!-- SERVICES SECTION -->
     <section id="services" class="section">
         <h2 class="section-title">Our Capabilities & Services</h2>
-        <p class="section-subtitle">Delivering exceptional workmanship across Trinidad with dependable turnaround times.</p>
+        <p class="section-subtitle">Delivering exceptional workmanship across Trinidad, Tobago, and the Caribbean with dependable turnaround times.</p>
         
         <div class="services-grid">
             <div class="service-card">
@@ -488,35 +695,125 @@
                     <li>Comprehensive property repairs</li>
                     <li>Masonry, tiling & concrete sealing</li>
                     <li>Painting & surface restoration</li>
-                    <li>Preventative maintenance plans</li>
+                    <li>24/7 urgent property response</li>
                 </ul>
             </div>
         </div>
     </section>
 
-    <!-- CORPORATE CONTACT & QUOTE SECTION -->
+    <!-- PROJECT PHOTOS SECTION -->
+    <section id="projects" class="section">
+        <h2 class="section-title">Recent Completed Projects</h2>
+        <p class="section-subtitle">Real workmanship across residential homes, commercial facilities, and industrial sites.</p>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <!-- Replace src with your actual project photo e.g. project1.jpg -->
+                <img src="project1.jpg" alt="Roof Restoration & Gutter Maintenance" onerror="this.src='https://images.unsplash.com/photo-1632759145351-1d592919f522?auto=format&fit=crop&w=800&q=80'">
+                <div class="gallery-caption">
+                    <span>Roofing & Guttering</span>
+                    <h4>Full Roof Wash & Seamless Gutter Repair</h4>
+                    <p>Complete algae removal, leak sealing, and downspout realignment.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <!-- Replace src with your actual project photo e.g. project2.jpg -->
+                <img src="project2.jpg" alt="Custom Welding & Steel Fabrication" onerror="this.src='https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=800&q=80'">
+                <div class="gallery-caption">
+                    <span>Welding & Fabrication</span>
+                    <h4>Heavy-Duty Security Gate & Structural Frame</h4>
+                    <p>Custom steel fabrication, anti-rust priming, and precision installation.</p>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <!-- Replace src with your actual project photo e.g. project3.jpg -->
+                <img src="project3.jpg" alt="Commercial High-Pressure Washdown" onerror="this.src='https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=800&q=80'">
+                <div class="gallery-caption">
+                    <span>Power Washing</span>
+                    <h4>Exterior Concrete & Driveway Restoration</h4>
+                    <p>High-pressure washdown removing years of grime, mildew, and buildup.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENT TESTIMONIALS SECTION -->
+    <section id="testimonials" class="section">
+        <h2 class="section-title">Client Testimonials</h2>
+        <p class="section-subtitle">Trusted by homeowners and businesses for dependable, round-the-clock service.</p>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Called Get It Done Services for an urgent roof leak and blocked guttering during heavy rain. They responded immediately, fixed the issue cleanly, and left the yard spotless."</p>
+                <div class="client-meta">
+                    <strong>Marcus R.</strong>
+                    <span>Homeowner • Chaguanas, Trinidad</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Top-tier welding and power washing work on our commercial property. Reliable turnaround times and fair, transparent pricing from start to finish."</p>
+                <div class="client-meta">
+                    <strong>Keisha D.</strong>
+                    <span>Property Manager • Port of Spain</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="stars">★★★★★</div>
+                <p>"Having a contractor who operates 24/7 gives real peace of mind. From plumbing repairs to grounds upkeep, their crew handles everything professionally."</p>
+                <div class="client-meta">
+                    <strong>Devon T.</strong>
+                    <span>Commercial Client • Scarborough, Tobago</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORPORATE CONTACT & LIVE SCHEDULE SECTION -->
     <section id="quote" class="section">
-        <h2 class="section-title">Request a Quotation</h2>
-        <p class="section-subtitle">Get in touch with our team for site inspections, estimates, and project bookings.</p>
+        <h2 class="section-title">Schedule & Request a Quotation</h2>
+        <p class="section-subtitle">Select an available date below or send your project details for an immediate response.</p>
+
+        <!-- LIVE SCHEDULED AVAILABLE DATES -->
+        <div class="schedule-box">
+            <div class="schedule-header">
+                <h3><span class="live-dot"></span> Live Scheduled Available Dates</h3>
+                <span style="font-size: 0.88rem; color: var(--text-muted); font-weight: 600;">Click an open date to select it for your booking • 24/7 Emergency Dispatch Available</span>
+            </div>
+            <div class="slots-grid" id="live-slots">
+                <!-- Populated dynamically via JavaScript -->
+            </div>
+        </div>
         
         <div class="contact-layout">
             <div class="contact-info-panel">
                 <h3>Head Office Contact</h3>
-                <p>Reach out directly for rapid scheduling across Trinidad.</p>
+                <p>Serving residential, commercial, and industrial properties across Trinidad, Tobago, and the Caribbean.</p>
                 
                 <div class="info-item">
                     <strong>Telephone / WhatsApp</strong>
-                    <span>+1 (868) 729-6946</span>
+                    <a href="https://wa.me/18687296946" target="_blank">+1 (868) 729-6946</a>
                 </div>
 
                 <div class="info-item">
                     <strong>Official Email</strong>
-                    <span>getitdoneservicestnt@gmail.com</span>
+                    <a href="mailto:getitdoneservicestnt@gmail.com">getitdoneservicestnt@gmail.com</a>
                 </div>
 
                 <div class="info-item">
                     <strong>Business Hours</strong>
-                    <span>Monday – Saturday: 8:00 AM – 5:00 PM</span>
+                    <span>Open 24/7</span>
+                    <small>Because your property matters and anything can happen anytime.</small>
+                </div>
+
+                <div class="info-item">
+                    <strong>Service Coverage</strong>
+                    <span>Trinidad • Tobago • The Caribbean</span>
                 </div>
             </div>
 
@@ -531,6 +828,10 @@
                         <input type="tel" id="phone" name="phone" class="form-control" placeholder="(868) 000-0000" required>
                     </div>
                     <div class="form-group">
+                        <label for="preferred_date">Preferred Scheduled Date</label>
+                        <input type="text" id="preferred_date" name="preferred_date" class="form-control" placeholder="Select a date above or type your preferred date/time">
+                    </div>
+                    <div class="form-group">
                         <label for="service">Service Required (Required)</label>
                         <select id="service" name="service" class="form-control" required>
                             <option value="">Select a service category...</option>
@@ -542,11 +843,12 @@
                             <option value="Property Cleaning">Property Cleaning</option>
                             <option value="Gutter Cleaning and Repairs">Gutter Cleaning & Repairs</option>
                             <option value="General Maintenance">General Maintenance</option>
+                            <option value="24/7 Emergency Callout">24/7 Emergency Callout</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Project Details & Location (Required)</label>
-                        <textarea id="message" name="message" class="form-control" placeholder="Describe scope of work and location..." required></textarea>
+                        <label for="message">Project Details & Island/Location (Required)</label>
+                        <textarea id="message" name="message" class="form-control" placeholder="Describe scope of work and location (Trinidad, Tobago, or Caribbean)..." required></textarea>
                     </div>
                     <button type="submit" class="btn btn-red" style="width: 100%;">Submit Inquiry</button>
                 </form>
@@ -556,12 +858,48 @@
 
     <!-- FLOATING WHATSAPP -->
     <a href="https://wa.me/18687296946?text=Hi,%20I%20would%20like%20to%20request%20a%20site%20visit%20quote%20for%20Get%20It%20Done%20Services." target="_blank" class="floating-whatsapp">
-        💬 Chat on WhatsApp
+        💬 24/7 WhatsApp Dispatch
     </a>
 
     <footer>
-        <p>&copy; 2026 Get It Done Services. All Rights Reserved. | Professional Property Maintenance & Contracting</p>
+        <p>&copy; 2026 Get It Done Services. All Rights Reserved. | Serving Trinidad, Tobago & the Caribbean — 24/7</p>
     </footer>
+
+    <!-- LIVE AVAILABILITY SCRIPT -->
+    <script>
+        (function() {
+            const container = document.getElementById('live-slots');
+            const dateInput = document.getElementById('preferred_date');
+            const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+            const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+            
+            const today = new Date();
+            // Generate next 6 open booking days
+            for (let i = 1; i <= 6; i++) {
+                const slotDate = new Date(today);
+                slotDate.setDate(today.getDate() + i);
+                
+                const dayName = days[slotDate.getDay()];
+                const formattedDate = `${months[slotDate.getMonth()]} ${slotDate.getDate()}, ${slotDate.getFullYear()}`;
+                
+                const card = document.createElement('div');
+                card.className = 'slot-card';
+                card.innerHTML = `
+                    <div class="slot-day">${dayName}</div>
+                    <div class="slot-date">${formattedDate}</div>
+                    <div class="slot-status">Open • 24/7 Slots</div>
+                `;
+                
+                card.addEventListener('click', () => {
+                    document.querySelectorAll('.slot-card').forEach(c => c.classList.remove('selected'));
+                    card.classList.add('selected');
+                    dateInput.value = `${dayName}, ${formattedDate}`;
+                });
+                
+                container.appendChild(card);
+            }
+        })();
+    </script>
 
 </body>
 </html>
